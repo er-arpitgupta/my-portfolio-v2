@@ -2,118 +2,117 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <title>Arpit Gupta | Portfolio</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="./static/images/favicon.png" type="image/icon">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="/css/toggledarkmode.css">
-
-    <script>
-        function handleDarkMode() {
-            const darkLight = document.body.className;
-            if (darkLight === 'light') {
-                document.getElementsByClassName('moon')[0].style.display = 'block';
-                document.getElementsByClassName('sun')[0].style.display = 'none';
-                document.body.className = 'dark'
-            } else {
-                document.getElementsByClassName('sun')[0].style.display = 'block';
-                document.getElementsByClassName('moon')[0].style.display = 'none';
-                document.body.className = 'light';
-            }
-        }
-    </script>
 </head>
 
-<body class="light">
-
-    <header class="banner">
+<body>
+    <div class="banner">
         <a href="/" class="logo">
             A<span class="hidden">rpit </span>G<span class="hidden">upta</span>
         </a>
-        <input class="menu-button" type="checkbox" id="menu-button" />
-        <label class="menu-icon" for="menu-button"><span class="navicon"></span></label>
+        <input class="menu-button" type="checkbox" id="menu-button" style="display: none;" />
+        <label class="menu-icon" for="menu-button">
+            <span class="navicon"></span>
+        </label>
 
-        <div class="darkmode-toggle-parent">
-            <input type="checkbox" name="darkmode-toggle" id="darkmode-toggle" />
-            <label for="darkmode-toggle" onclick="handleDarkMode()">
-                <img class="sun" src="/static/images/sun.svg" alt="" srcset="">
-                <img class="moon" src="/static/images/moon.svg" style="display: none;">
+        <div class="darkmode-parent">
+            <input type="checkbox" id="darkmode" style="display: none;" />
+            <label for="darkmode">
+                <img class="moon" src="./assets/images/moon.svg" alt="moon" style="display: none;" />
+                <img class="sun" src="./assets/images/sun.svg" alt="sun" />
             </label>
         </div>
 
         <ul class="menu">
-            <li>
-                <a href="#home">
-                    <img src="./static/images/home.svg" alt="Home">
-                    <span class="nav-name">Home</span>
-                </a>
+            <li id="#about">
+                <img src="./assets/images/about.svg" alt="about" />
+                <span class="nav-name">About</span>
             </li>
-            <li>
-                <a href="#about">
-                    <img src="./static/images/about.svg" alt="About">
-                    <span class="nav-name">About</span>
-                </a>
+            <li id="#skills">
+                <img src="./assets/images/skills.svg" alt="skills" />
+                <span class="nav-name">Skills</span>
             </li>
-            <li>
-                <a href="#skills">
-                    <img src="./static/images/skills.svg" alt="Skills">
-                    <span class="nav-name">Skills</span>
-                </a>
-            </li>
-            <li>
-                <a href="#work">
-                    <img src="./static/images/work.svg" alt="Work">
-                    <span class="nav-name">Work</span>
-                </a>
-            </li>
-            <li>
-                <a href="#contact">
-                    <img src="./static/images/contact.svg" alt="Contact">
-                    <span class="nav-name">Contact</span>
-                </a>
+            <li id="#work">
+                <img src="./assets/images/work.svg" alt="work" />
+                <span class="nav-name">Work</span>
             </li>
         </ul>
-    </header>
+    </div>
 
-    <div class="outer" id="home">
-        <div class="home">
-            <div class="photo">
-                <img src="./static/images/ArpitGupta-ProfilePic.jpg" alt="my photo">
-            </div>
-            <div class="home-content">
-                <div class="intro">
-                    <p>Hello World! I'm</p>
-                    <p>Arpit Gupta</p>
-                    <p>A versatile <span class="special">Full-Stack Developer</span> with strong foundation in back-end
-                        and front-end technologies,
-                        adept at creating innovative and efficient web solutions that deliver exceptional user
-                        experiences.</p>
-                </div>
-                <div class="buttons">
-                    <a href="ArpitResume.pdf" class="resume" download="ArpitGupta_Resume">Resume</a>
-                    <div class="links">
-                        <a href="mailto:er.gupta.arpit@gmail.com"><img src="./static/images/gmail.svg"
-                                alt="My Gmail link"></a>
-                        <a href="https://www.linkedin.com/in/er-arpit-gupta"><img src="./static/images/linkedin.svg"
-                                alt="My LinkedIn link"></a>
-                        <a href="https://github.com/er-arpitgupta"><img src="./static/images/github.svg"
-                                alt="My GitHub link"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="container">
 
         <div class="about" id="about">
-            <p class="before-heading"> Some Info</p>
-            <p class="heading">About Me</p>
-            <div class="content">
-                <p>As a Full-Stack Developer, I possess the ability to handle all layers of a software application, from
-                    crafting visually appealing user interfaces to implementing robust server-side logic and database
-                    management. I excel in problem-solving, adapting to new technologies, and staying up-to-date with
-                    industry trends. Collaborative and effective in communication, I am a valuable team player who can
-                    transform complex requirements into innovative and user-friendly solutions. With meticulous
-                    attention to detail, I deliver clean and efficient code, ensuring the successful implementation of
-                    comprehensive web development projects.</p>
+            <div class="darkmode-animation" style="display: none;">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+                <div class="stars"></div>
+                <div class="twinkling"></div>
+                <div class="clouds"></div>
+            </div>
+
+            <img class="photo" src="./assets/images/ArpitGupta.jpg" alt="ArpitGupta" />
+            <div class="home-content">
+                <h6>Hello World! I'm</h6>
+                <h1>Arpit Gupta</h1>
+                <h4>
+                    A <u class="special">pro</u>grammer with strong foundation in
+                    front-end technologies, adept at creating innovative and efficient web
+                    solutions that deliver exceptional user experiences.
+                    <br>
+                    <br>
+                    "Crafting captivating digital experiences one line of code at a time.
+                    With a passion for frontend technologies, I blend creativity with
+                    technical prowess to breathe life into pixels. Welcome to my
+                    playground, where every click sparks innovation and every scroll
+                    unveils the artistry of UI development."
+                </h4>
+                <br>
+                <div class="links">
+                    <img src="./assets/images/gmail.svg" alt="gmail">
+                    <img src="./assets/images/linkedin.svg" alt="linkedin">
+                    <img src="./assets/images/skills/github.svg" alt="github">
+                </div>
+            </div>
+            <div class="lightmode-animation">
+                <div id="background-wrap">
+                    <div class="x1">
+                        <div class="cloud"></div>
+                    </div>
+                    <div class="x2">
+                        <div class="cloud"></div>
+                    </div>
+                    <div class="x3">
+                        <div class="cloud"></div>
+                    </div>
+                    <div class="x4">
+                        <div class="cloud"></div>
+                    </div>
+                    <div class="x5">
+                        <div class="cloud"></div>
+                    </div>
+                </div>
+
+                <div class="sun">
+                    <div class="ray_box">
+                        <div class="ray ray1"></div>
+                        <div class="ray ray2"></div>
+                        <div class="ray ray3"></div>
+                        <div class="ray ray4"></div>
+                        <div class="ray ray5"></div>
+                        <div class="ray ray6"></div>
+                        <div class="ray ray7"></div>
+                        <div class="ray ray8"></div>
+                        <div class="ray ray9"></div>
+                        <div class="ray ray10"></div>
+                    </div>
+                </div>
+                <img class="mountain" src="assets/images/mountain.png" alt="mountain">
             </div>
         </div>
 
@@ -122,108 +121,64 @@
             <p class="heading">Skills</p>
             <div class="content">
                 <div class="skill-set">
-                    <div class="title">
-                        <span>Skills</span>
-                    </div>
+                    <span class="title">Skills</span>
                     <div class="skill-logos">
                         <div class="box">
-                            <img src="./static/images/skills/java.svg" alt="Java">
-                            <span>Java</span>
+                            <img src="./assets/images/skills/html.svg" alt="html" />
+                            <span>HTML</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/springio.svg" alt="Spring Boot">
-                            <span>Spring Boot</span>
+                            <img src="./assets/images/skills/css.svg" alt="css" />
+                            <span>CSS</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/jenkins.svg" alt="Jenkins">
-                            <span>Jenkins</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/docker.svg" alt="Docker">
-                            <span>Docker</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/kubernetes.svg" alt="Kubernetes">
-                            <span>Kubernetes</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/mysql.svg" alt="MySQL">
-                            <span>MySQL</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/mongo.svg" alt="mongoDB">
-                            <span>Mongo DB</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/git.svg" alt="Git">
-                            <span>Git</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/html5.svg" alt="HTML5">
-                            <span>HTML5</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/css.svg" alt="CSS3">
-                            <span>CSS3</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/javascript.svg" alt="JavaScript">
+                            <img src="./assets/images/skills/javascript.svg" alt="javascript" />
                             <span>JavaScript</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/react.svg" alt="React">
-                            <span>React</span>
+                            <img src="./assets/images/skills/jquery.svg" alt="jquery" />
+                            <span>jQuery</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/api.svg" alt="Rest API">
-                            <span>Rest API</span>
+                            <img src="./assets/images/skills/bootstrap.svg" alt="bootstrap" />
+                            <span>Bootstrap</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/python.svg" alt="Python">
-                            <span>Python</span>
+                            <img src="./assets/images/skills/react.svg" alt="react" />
+                            <span>ReactJS</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/django.svg" alt="Django">
-                            <span>Django</span>
+                            <img src="./assets/images/skills/git.svg" alt="git" />
+                            <span>GIT</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/flask.svg" alt="Flask">
-                            <span>Flask</span>
+                            <img src="./assets/images/skills/api.svg" alt="api" />
+                            <span>RestAPI</span>
                         </div>
                     </div>
                 </div>
                 <div class="tools">
-                    <div class="title">
-                        <span>Tools</span>
-                    </div>
+                    <span class="title">Tools</span>
                     <div class="tools-logos">
                         <div class="box">
-                            <img src="./static/images/skills/vscode.svg" alt="VS Code">
+                            <img src="./assets/images/skills/vscode.svg" alt="vscode" />
                             <span>VS Code</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/intellij.svg" alt="IntelliJ Idea">
-                            <span>IntelliJ</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/pycharm.svg" alt="PyCharm">
-                            <span>PyCharm</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/eclipse.svg" alt="Eclipse">
-                            <span>Eclipse</span>
-                        </div>
-                        <div class="box">
-                            <img src="./static/images/skills/github.svg" alt="GitHub">
+                            <img src="./assets/images/skills/github.svg" alt="github" />
                             <span>GitHub</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/postman.svg" alt="Postman">
+                            <img src="./assets/images/skills/postman.svg" alt="postman" />
                             <span>Postman</span>
                         </div>
                         <div class="box">
-                            <img src="./static/images/skills/sqldeveloper3.svg" alt="Oracle SQL Developer">
-                            <span>SQL Developer</span>
+                            <img src="./assets/images/skills/jira.svg" alt="jira" />
+                            <span>Jira</span>
+                        </div>
+                        <div class="box">
+                            <img src="./assets/images/skills/confluence.svg" alt="confluence" />
+                            <span>Confluence</span>
                         </div>
                     </div>
                 </div>
@@ -233,106 +188,58 @@
         <div class="work" id="work">
             <p class="before-heading"> Take a look at my</p>
             <p class="heading">Projects</p>
-            <div class="content">
 
-                <div class="project">
-                    <img src="./static/images/project/lms.png" alt="Library Management System">
-                    <div class="project-content">
-                        <p class="project-heading">Library Management System</p>
-                        <p>Technologies: <br class="line-break"><span class="special">React, Spring Boot</span></p>
-                        <ul>
-                            <li>A platform for all the students to issue and request books online.</li>
-                            <li>Faculty members can add, modify, delete and track the status of the book requests.</li>
-                        </ul>
-                        <div style="display: none;">
-                            <a href="">Live</a>
-                            <a href="">Repo</a>
-                        </div>
+            <div class="section-wrapper">
+                <a class="section-card" href="/pricing-component">
+                    <span>
+                        <img src="./assets/images/pricing.png" alt="" />
+                    </span>
+                    <div>
+                        <span>Pricing Components</span>
                     </div>
-                </div>
+                </a>
 
-                <div class="project">
-                    <img src="./static/images/project/photofolio.jpg" alt="PhotoFolio">
-                    <div class="project-content">
-                        <p class="project-heading">PhotoFolio</p>
-                        <p>Technologies: <span class="special">HTML, CSS, React</span></p>
-                        <ul>
-                            <li>A website to showcase my photography and editing skills.</li>
-                            <li>This website is the depiction of my creativity using technology.</li>
-                        </ul>
-                        <div style="display: none;">
-                            <a href="">Live</a>
-                            <a href="">Repo</a>
-                        </div>
+                <a class="section-card" href="/photofolio">
+                    <span>
+                        <img src="./assets/images/photofolio.png" alt="" />
+                    </span>
+                    <div>
+                        <span>PhotoFolio</span>
                     </div>
-                </div>
+                </a>
 
-                <div class="project">
-                    <img src="./static/images/project/opensource.webp" alt="Library Management System">
-                    <div class="project-content">
-                        <p class="project-heading">CSS Templates</p>
-                        <p>Technologies: <br class="line-break"><span class="special">HTML, CSS, JS</span></p>
-                        <ul>
-                            <li>A place where I added my custom made various templates using HTML, CSS and JS</li>
-                            <li>It is also an open source meaning you can find useful templates and can use on the go.
-                            </li>
-                        </ul>
-                        <div>
-                            <a href="project/opensource/opensource.html">Live</a>
-                            <a href="">Repo</a>
-                        </div>
+                <a class="section-card" href="/">
+                    <span>
+                        <img src="./assets/images/templates.png" alt="" />
+                    </span>
+                    <div>
+                        <span>CSS Templates</span>
                     </div>
-                </div>
+                </a>
 
-            </div>
-        </div>
-
-        <div class="contact" id="contact">
-            <p class="before-heading"> Say Hello</p>
-            <p class="heading">Contact</p>
-            <div class="content">
-                <div class="form-content">
-                    <div class="form">
-                        <div class="form-heading">Get in touch</div>
-                        <form action="" method="get" enctype="text/plain">
-                            <input class="form-field" type="text" name="name" id="name" placeholder="Your Name" required
-                                pattern="[a-zA-Z ]+">
-                            <input class="form-field" type="email" name="email" id="email" placeholder="Your Email"
-                                required>
-                            <input class="form-field" type="text" name="message" id="message"
-                                placeholder="Your Message">
-
-                            <div class="form-buttons">
-                                <input class="form-button" type="submit" name="submit" value="Send">
-                                <input class="form-button" type="reset" name="reset" value="Clear">
-                            </div>
-                        </form>
+                <a class="section-card" href="/">
+                    <span>
+                        <img src="./assets/images/lms.png" alt="" />
+                    </span>
+                    <div>
+                        <span>Library Management System</span>
                     </div>
-                    <div class="contact-detail">
-                        <div>
-                            <span class="detail-heading">Email</span>
-                            <span class="detail-link">er.gupta.arpit@gmail.com</span>
-                        </div>
-                        <div>
-                            <span class="detail-heading">LinkedIn</span>
-                            <span class="detail-link">linkedin.com/in/er-arpit-gupta/</span>
-                        </div>
-                        <div>
-                            <span class="detail-heading">GitHub</span>
-                            <span class="detail-link">github.com/er-arpitgupta</span>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
 
     </div>
 
-    <footer>
-        <p>&copy; Arpit Gupta
-            <script>document.write(new Date().getFullYear());</script>
-        </p>
-    </footer>
+    <div class="home-footer">
+        &copy; Arpit Gupta,
+        <script>document.write(new Date().getFullYear())</script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
